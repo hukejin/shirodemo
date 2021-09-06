@@ -1,0 +1,20 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /shiroshow
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.0.103:3306/shirodb?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+
+# 配置日志输出路径
+logging:
+  level:
+    cn.com.godliu.shirodemo: debug # 配置将该报路径下的日志打印出来，生产环境改为error
+  config: classpath:static/logback-spring.xml
+# apns路径
+apns: classpath:static/开发环境证书ygcf.p12
+
